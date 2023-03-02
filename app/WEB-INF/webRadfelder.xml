@@ -1,0 +1,167 @@
+<web-app>  
+	<context-param>
+		<param-name>myinit</param-name>
+		<param-value>myinitvalue</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>hbv.MyContextListener</listener-class>
+	</listener>
+
+	<servlet>  
+		<servlet-name>helloServlet</servlet-name>
+		<servlet-class>hbv.HelloServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>helloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>  
+		<servlet-name>forwarderServlet</servlet-name>
+		<servlet-class>hbv.ForwarderServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>forwarderServlet</servlet-name>
+		<url-pattern>/forwarder</url-pattern>
+	</servlet-mapping>	
+
+
+	<servlet>  
+		<servlet-name>sqlServlet</servlet-name>
+		<servlet-class>hbv.SQLServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>sqlServlet</servlet-name>
+		<url-pattern>/sql</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>  
+		<servlet-name>allServlet</servlet-name>
+		<servlet-class>hbv.AllServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>allServlet</servlet-name>
+		<url-pattern>/all</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>  
+		<servlet-name>sqlPoolServlet</servlet-name>
+		<servlet-class>hbv.SQLPoolServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>sqlPoolServlet</servlet-name>
+		<url-pattern>/sqlpool</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>  
+		<servlet-name>redisServlet</servlet-name>
+		<servlet-class>hbv.RedisServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>redisServlet</servlet-name>
+		<url-pattern>/redis</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>  
+		<servlet-name>redisPoolServlet</servlet-name>
+		<servlet-class>hbv.RedisPoolServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>redisPoolServlet</servlet-name>
+		<url-pattern>/redispool</url-pattern>
+	</servlet-mapping>	
+
+
+	<servlet>  
+		<servlet-name>imageServlet</servlet-name>
+		<servlet-class>hbv.ImageServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>imageServlet</servlet-name>
+		<url-pattern>/image</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>  
+		<servlet-name>uploadServlet</servlet-name>
+		<servlet-class>hbv.UploadServlet</servlet-class>
+		<multipart-config>
+			<max-file-size>10485760</max-file-size>
+			<max-request-size>20971520</max-request-size>
+			<!--			<file-size-threshold>5242880</file-size-threshold>-->
+		</multipart-config>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>uploadServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>	
+
+
+
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>hbv.loginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hbv.loginServlet</servlet-name>
+		<url-pattern>/loginVrai</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>centralServlet</servlet-name>
+		<servlet-class>hbv.centralServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>centralServlet</servlet-name>
+		<url-pattern>/centralVrai</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>confirmationServlet</servlet-name>
+		<servlet-class>hbv.confirmationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>confirmationServlet</servlet-name>
+		<url-pattern>/confirmation</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>hbv.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/registerVRai</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/registerVrai</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+		<servlet-name>QRCodeServet</servlet-name>
+		<servlet-class>hbv.QRCodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QRCodeServlet</servlet-name>
+		<url-pattern>/qrcode</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<filter> 
+		<filter-name>myfilter</filter-name>
+		<filter-class>hbv.MyFilter</filter-class> 
+		<async-supported>true</async-supported> 
+	</filter> 
+
+	<filter-mapping> 
+		<filter-name>myfilter</filter-name>
+		<url-pattern>/*</url-pattern> 
+	</filter-mapping> 
+
+
+</web-app>  

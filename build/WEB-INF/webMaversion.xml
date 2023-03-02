@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>CononaHochschule</display-name>
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>hbv.loginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hbv.loginServlet</servlet-name>
+		<url-pattern>/loginVrai</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>centralServlet</servlet-name>
+		<servlet-class>hbv.centralServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>centralServlet</servlet-name>
+		<url-pattern>/centralVrai</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>confirmationServlet</servlet-name>
+		<servlet-class>hbv.confirmationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>confirmationServlet</servlet-name>
+		<url-pattern>/confirmation</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>hbv.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/registerVRai</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/registerVrai</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>hbv.HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QRCodeServet</servlet-name>
+		<servlet-class>hbv.QRCodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QRCodeServlet</servlet-name>
+		<url-pattern>/qrcode</url-pattern>
+	</servlet-mapping>
+
+</web-app>
